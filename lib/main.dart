@@ -3,6 +3,8 @@ import 'package:blood_donation/Login.dart';
 import 'package:blood_donation/SignUp.dart';
 import 'package:blood_donation/Start.dart';
 import 'package:blood_donation/load.dart';
+import 'package:blood_donation/screens/add_new_medicine/add_new_medicine.dart';
+import 'package:blood_donation/screens/home/home.dart';
 import 'package:flutter/material.dart';
 
 import 'HomePage.dart';
@@ -18,14 +20,18 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-        theme: ThemeData(primaryColor: Colors.red),
+      theme: ThemeData(primaryColor: Colors.red),
         debugShowCheckedModeBanner: false,
         home: HomePage(),
         routes: <String, WidgetBuilder>{
           "Login": (BuildContext context) => Login(),
           "SignUp": (BuildContext context) => SignUp(),
           "start": (BuildContext context) => Start(),
-        });
+          "/home": (BuildContext context) => Home()
+          "/add_new_medicine": (BuildContext context) => AddNewMedicine(),
+        }
+
+    );
   }
 }
 
