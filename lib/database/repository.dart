@@ -1,6 +1,6 @@
 
 
-import 'package:medicine/database/pills_database.dart';
+import 'package:blood_donation/database/pills_database.dart';
 import 'package:sqflite/sqflite.dart';
 
 class Repository{

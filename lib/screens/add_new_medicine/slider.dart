@@ -1,6 +1,6 @@
 
 import 'package:flutter/material.dart';
-import 'package:medicine/helpers/platform_slider.dart';
+import 'package:blood_donation/helpers/platform_slider.dart';
 
 class UserSlider extends StatelessWidget {
   final Function handler;

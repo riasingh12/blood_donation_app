@@ -22,6 +22,9 @@ class _HomePageState extends State<HomePage> {
       }
     });
   }
+  navigateToMed() async {
+    Navigator.pushReplacementNamed(context, "add_new_medicine");
+  }
 
   getUser() async {
     User firebaseUser = _auth.currentUser;
@@ -86,7 +89,22 @@ class _HomePageState extends State<HomePage> {
                       shape: RoundedRectangleBorder(
                         borderRadius: BorderRadius.circular(20),
                       ),
-                    )
+                    ),
+                    RaisedButton(
+                      padding: EdgeInsets.fromLTRB(70, 10, 70, 10),
+                      onPressed: navigateToMed,
+                      child: Text(
+                        'Add Meds',
+                        style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 20,
+                            fontWeight: FontWeight.bold),
+                      ),
+                      color: Colors.red,
+                      shape: RoundedRectangleBorder(
+                        borderRadius: BorderRadius.circular(20),
+                      ),
+                    ),
                   ],
                 ),
       ),

@@ -1,6 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:medicine/screens/add_new_medicine/slider.dart';
+import 'package:blood_donation/screens/add_new_medicine/slider.dart';
 
 
 class FormFields extends StatelessWidget {

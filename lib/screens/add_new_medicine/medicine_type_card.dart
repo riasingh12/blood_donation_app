@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:medicine/models/medicine_type.dart';
+import 'package:blood_donation/models/medicine_type.dart';
 
 
 class MedicineTypeCard extends StatelessWidget {
