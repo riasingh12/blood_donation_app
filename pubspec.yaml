@@ -29,7 +29,6 @@ dependencies:
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
   google_sign_in:
-  intl: ^0.16.1
   firebase_auth: 
   provider:
   flutter_signin_button: ^1.1.0
@@ -39,7 +38,13 @@ dependencies:
   flutter_local_notifications: ^4.0.1+1
   animated_text_kit: ^3.1.2
   animated_widgets: ^1.0.6
+  path: ^1.7.0
+  intl: ^0.16.1
+  auto_size_text: ^2.1.0
   timezone: ^0.6.1
+
+
+
 
 
 
@@ -67,9 +72,11 @@ flutter:
     - images/cream.png
     - images/drops.png
     - images/pills.png
+    - images/start.png
     - images/syringe.png
     - images/syrup.png
     - images/welcome_image.png
+
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -2,7 +2,7 @@
 import 'package:blood_donation/Login.dart';
 import 'package:blood_donation/SignUp.dart';
 import 'package:blood_donation/Start.dart';
-import 'package:blood_donation/load.dart';
+// import 'package:blood_donation/load.dart';
 import 'package:blood_donation/screens/add_new_medicine/add_new_medicine.dart';
 import 'package:blood_donation/screens/home/home.dart';
 import 'package:flutter/material.dart';
@@ -20,18 +20,36 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.red),
+        // theme: ThemeData(primaryColor: Colors.red),
+        theme: ThemeData(
+            fontFamily: "Popins",
+            primaryColor: Colors.red,
+            textTheme: TextTheme(
+                headline1: ThemeData.light().textTheme.headline1.copyWith(
+                      fontWeight: FontWeight.w700,
+                      fontSize: 38.0,
+                      fontFamily: "Popins",
+                    ),
+                headline5: ThemeData.light().textTheme.headline1.copyWith(
+                      fontWeight: FontWeight.w400,
+                      fontSize: 17.0,
+                      fontFamily: "Popins",
+                    ),
+                headline3: ThemeData.light().textTheme.headline3.copyWith(
+                      fontWeight: FontWeight.w600,
+                      fontSize: 20.0,
+                      fontFamily: "Popins",
+                    ))),
         debugShowCheckedModeBanner: false,
         home: HomePage(),
         routes: <String, WidgetBuilder>{
+          // "/": (context) => HomePage(),
           "Login": (BuildContext context) => Login(),
           "SignUp": (BuildContext context) => SignUp(),
           "start": (BuildContext context) => Start(),
           "/home": (BuildContext context) => Home(),
-          "add_new_medicine": (BuildContext context) => AddNewMedicine(),
-        }
-
-    );
+          "/add_new_medicine": (BuildContext context) => AddNewMedicine(),
+        });
   }
 }
 
@@ -48,40 +66,3 @@ class MyApp extends StatelessWidget {
 //     //         },
 //  }
 // // }
-
-/*
-import 'package:flutter/material.dart';
-void main() => runApp(MyApp());
-/// This is the main application widget.
-class MyApp extends StatelessWidget {
-  static const String _title = 'Flutter Code Sample';
-
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      title: _title,
-      home: MyStatefulWidget(),
-    );
-  }
-}
-
-/// This is the stateful widget that the main application instantiates.
-class MyStatefulWidget extends StatefulWidget {
-  MyStatefulWidget({Key key}) : super(key: key);
-
-  @override
-  _MyStatefulWidgetState createState() => _MyStatefulWidgetState();
-}
-
-/// This is the private State class that goes with MyStatefulWidget.
-class _MyStatefulWidgetState extends State<MyStatefulWidget> {
-  int _selectedIndex = 0;
-  static const TextStyle optionStyle =
-  TextStyle(fontSize: 30, fontWeight: FontWeight.bold);
-
-  void _onItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
-  }
-*/
